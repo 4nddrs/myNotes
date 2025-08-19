@@ -1,0 +1,10 @@
+[build]
+  publish = "dist"            # Carpeta de salida de Quartz
+  command = "npx quartz build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[context.production.environment]
+  GIT_SUBMODULE_STRATEGY = "recursive"   # Asegura que Netlify clone submódulos
+
