@@ -1,10 +1,12 @@
 [build]
-  publish = "public"            # Carpeta de salida de Quartz
-  command = "npx quartz build"
+  # Comando para construir Quartz
+  command = "git submodule update --remote content && npx quartz build"
+  # Carpeta que Netlify publicará
+  publish = "public"
 
 [build.environment]
   NODE_VERSION = "20"
 
 [context.production.environment]
-  GIT_SUBMODULE_STRATEGY = "recursive"   # Asegura que Netlify clone submódulos
-
+  # Asegura que Netlify clone los submódulos
+  GIT_SUBMODULE_STRATEGY = "recursive"
