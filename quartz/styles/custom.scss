@@ -1,0 +1,138 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+/* ====== Quartz Custom Theme: Obsidian Prime Dark ====== */
+
+/* Base y fondo */
+body.theme-dark {
+  background-color: #0d1117; /* --color-base-00 */
+  color: #fafbfc;           /* --text-normal */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* ====== Títulos h1-h6 ====== */
+h1 { color: #9ca0fa; } /* morado/azulado */
+h2 { color: #9cfaf6; } /* turquesa */
+h3 { color: #9cfac7; } /* verde claro */
+h4 { color: #faf69c; } /* amarillo */
+h5 { color: #fac79e; } /* naranja */
+h6 { color: #fa9ccf; } /* rosa */
+h6.subtitle, .subtitle { color: #fa9ccf; } /* --color-pink */
+
+/* ====== Links ====== */
+a {
+  color: #9cfaf6; /* --color-blue */
+  text-decoration: none;
+}
+a:hover {
+  color: #9ca0fa; /* --color-purple */
+  text-decoration: underline;
+}
+
+/* ====== Blockquotes ====== */
+blockquote {
+  background-color: #19212d; /* --color-base-10 */
+  border-left: 3px solid #9ca0fa; /* --color-purple */
+  padding: 0.5rem 1rem;
+  color: #c0c0c0; /* --text-muted */
+}
+
+/* ====== Código inline y bloques ====== */
+code, pre {
+  background-color: #131922; /* --color-base-05 */
+  color: #fafbfc;            /* --text-normal */
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ====== Resaltado ====== */
+.marked {
+  background-color: rgba(250, 246, 156, 0.1); /* --highlight-background-color--active */
+}
+
+/* ====== Tags ====== */
+.tag {
+  background-color: rgba(156, 160, 250, 0.2); /* --tag-background */
+  color: #9ca0fa;                             /* --color-purple */
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* ====== Tab activo ====== */
+.tab-active {
+  background-color: #19212d; /* --tab-background-active */
+}
+
+/* ====== Tablas ====== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #2c394d; /* --color-base-30 */
+  padding: 0.5rem;
+}
+th {
+  background-color: #1f2938; /* --color-base-20 */
+  color: #fafbfc;            /* --text-normal */
+}
+
+/* ====== Highlights por color ====== */
+.highlight-purple { background-color: rgba(156, 160, 250, 0.45); }
+.highlight-blue { background-color: rgba(156, 250, 246, 0.45); }
+.highlight-green { background-color: rgba(156, 250, 199, 0.45); }
+.highlight-yellow { background-color: rgba(250, 246, 156, 0.45); }
+.highlight-orange { background-color: rgba(250, 199, 158, 0.45); }
+.highlight-pink { background-color: rgba(250, 156, 207, 0.45); }
+
+/* ====== Otros ====== */
+hr {
+  border-color: #324158; /* --color-base-35 */
+}
+
+/* Callout personalizado para versículos */
+.callout[data-callout="versiculo"] {
+  border-left: 3px solid #2563eb; /* azul */
+  background: #0C1B2F;            /* fondo oscuro */
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  color: #e5e7eb;
+}
+
+/* Encabezado del callout */
+.callout[data-callout="versiculo"] .callout-title {
+  color: #3b82f6; /* azul brillante */
+  font-size: 1.1rem;   /* 🔥 agranda todo el callout */
+  line-height: 1.6;
+}
+
+/* Ícono antes del título */
+.callout[data-callout="versiculo"] .callout-title::before {
+  margin-right: 0.3em;
+}
+
+/* Callout tipo Important */
+.callout[data-callout="Important"] {
+  border-left: 3px solid #22c55e; /* verde */
+  background: #0d1117;            /* fondo oscuro (igual que tu captura) */
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  margin: 1em 0;
+  color: #e5e7eb;                 /* texto gris claro */
+}
+
+/* Título */
+.callout[data-callout="Important"] .callout-title {
+  color: #22c55e;   /* verde brillante */
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Ícono */
+.callout[data-callout="Important"] .callout-title::before {
+  content: "✅ ";
+  margin-right: 0.3em;
+}
