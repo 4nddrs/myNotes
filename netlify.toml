@@ -1,5 +1,5 @@
 [build]
-  publish = "dist"            # Carpeta de salida de Quartz
+  publish = "public"            # Carpeta de salida de Quartz
   command = "npx quartz build"
 
 [build.environment]
