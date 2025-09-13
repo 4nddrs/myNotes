@@ -1,6 +1,11 @@
 [build]
-  # Comando para construir Quartz
-  command = "git submodule update --remote content && npx quartz build"
+  # Comando para construir Quartz y actualizar submodules
+  command = """
+    git submodule sync --recursive
+    git submodule update --init --recursive
+    git submodule update --remote --merge
+    npx quartz build
+  """
   # Carpeta que Netlify publicará
   publish = "public"
 
@@ -8,5 +13,5 @@
   NODE_VERSION = "20"
 
 [context.production.environment]
-  # Asegura que Netlify clone los submódulos
+  # Asegura que Netlify clone los submodules
   GIT_SUBMODULE_STRATEGY = "recursive"
