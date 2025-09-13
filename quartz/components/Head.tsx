@@ -101,10 +101,10 @@ export default (() => {
         <link rel="icon" type="image/png" sizes="192x192" href={android192} />
         <link rel="icon" type="image/png" sizes="512x512" href={android512} />
         <link rel="manifest" href={manifestPath} />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#0D1117" />
 
         {/* Microsoft Tiles */}
-        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#0D1117" />
         <meta name="msapplication-TileImage" content={iconPath} />
 
         <meta name="description" content={description} />
